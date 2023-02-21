@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
     return {
       id: snap.id,
       ...snap.data(),
-      ecole: ecoleSnap.data() as Ecole,
-    } as Sort;
+      ecole: ecoleSnap.data(),
+    };
   }
 });
