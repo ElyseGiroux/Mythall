@@ -1,4 +1,4 @@
-import { firestore } from "~/server/utils/firebase";
+import { firestore } from "../../utils/firebase";
 
 export default defineEventHandler(async () => {
   const snap = await firestore.collection("sorts").limit(9).get();
