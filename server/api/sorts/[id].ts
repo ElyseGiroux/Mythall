@@ -1,10 +1,10 @@
-import { db } from "~/server/firebase";
+import { firestore } from "~/server/utils/firebase";
 
 export default defineEventHandler(async (event) => {
   const params = event.context.params;
   if (params && params.id) {
-    const snap = await db.collection("sorts").doc(params.id).get();
-    const ecoleSnap = await db.collection("ecoles").doc(snap.data()?.ecoleRef).get();
+    const snap = await firestore.collection("sorts").doc(params.id).get();
+    const ecoleSnap = await firestore.collection("ecoles").doc(snap.data()?.ecoleRef).get();
     return {
       id: snap.id,
       ...snap.data(),

@@ -9,4 +9,4 @@ export const app = initializeApp({
   databaseURL: config.FIREBASEURL,
 });
 
-export const db = getFirestore(app);
+export const firestore = getFirestore();

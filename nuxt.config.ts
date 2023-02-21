@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   nitro: {
     preset: "vercel-edge",
     prerender: {
-      crawlLinks: true,
-      routes: ["/"],
+      // crawlLinks: true,
+      // routes: ["/"],
     },
   },
   vite: {

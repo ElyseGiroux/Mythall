@@ -1,7 +1,7 @@
-import { db } from "~/server/firebase";
+import { firestore } from "~/server/utils/firebase";
 
-export default defineEventHandler(async (event) => {
-  const snap = await db.collection("sorts").get();
+export default defineEventHandler(async () => {
+  const snap = await firestore.collection("sorts").limit(9).get();
   return snap.docs.map((snap) => {
     return {
       id: snap.id,
