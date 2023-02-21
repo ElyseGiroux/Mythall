@@ -1,4 +1,4 @@
-import { cert, initializeApp } from "firebase-admin/app";
+import { cert, initializeApp, getApps } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 
 // import { firestore } from "../../utils/firebase";
@@ -6,13 +6,15 @@ import { getFirestore } from "firebase-admin/firestore";
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
   const serviceAccount = JSON.parse(config.FIREBASE);
+  const apps = getApps();
+  if (!apps.length) {
+    initializeApp({
+      credential: cert(serviceAccount),
+      databaseURL: config.FIREBASEURL,
+    });
+  }
 
-  const app = initializeApp({
-    credential: cert(serviceAccount),
-    databaseURL: config.FIREBASEURL,
-  });
-
-  const firestore = getFirestore(app);
+  const firestore = getFirestore();
 
   const params = event.context.params;
   if (params && params.id) {
