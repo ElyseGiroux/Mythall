@@ -1,5 +1,5 @@
 <template>
-  <Hero />
+  <LoginForm />
 </template>
 
 <script setup></script>

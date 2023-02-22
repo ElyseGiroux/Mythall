@@ -1,5 +1,5 @@
 <template>
-  <Hero />
+  <RegisterForm />
 </template>
 
 <script setup></script>
