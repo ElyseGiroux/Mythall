@@ -6,10 +6,7 @@
         <nuxt-img
           class="max-w-xl"
           src="/img/logo.png" />
-        <p class="max-w-4xl text-center text-2xl">
-          Bienvenue chère aventurier(s) dans le Mythall, un Grandeur Nature Médiéval Fantastique basé sur l'univers de
-          Forgotten Realm
-        </p>
+        <p class="max-w-4xl text-center text-2xl">Grandeur Nature Médiéval Fantastique basé sur Forgotten Realms</p>
       </div>
     </div>
   </section>

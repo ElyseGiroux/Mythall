@@ -8,7 +8,10 @@
           <nuxt-link to="inscription">créer un compte</nuxt-link>
         </p>
       </div>
-      <form class="flex w-auto min-w-[320px] flex-col gap-4 rounded-lg bg-white px-6 py-4 shadow-lg">
+      <form
+        class="flex w-auto min-w-[320px] flex-col gap-4 rounded-lg bg-white px-6 py-4 shadow-lg"
+        ref="loginForm"
+        @submit.prevent="login(event)">
         <div class="form-group">
           <label
             class="form-label"
@@ -37,7 +40,7 @@
             required />
         </div>
         <p>
-          <a href="/compte/mot-de-passe-oublie">Mot de passe oublié?</a>
+          <nuxt-link to="mot-de-passe-oublie">Mot de passe oublié?</nuxt-link>
         </p>
         <button
           class="btn-primary w-full"
@@ -48,3 +51,34 @@
     </div>
   </section>
 </template>
+
+<script setup>
+// States
+const loginForm = ref(null);
+const isSent = useState("isSent", () => false);
+const isLoading = useState("isLoading", () => false);
+const isSuccess = useState("isSuccess", () => false);
+
+const login = async () => {
+  // Set States
+  isSent.value = true;
+  isLoading.value = true;
+
+  try {
+    // Firebase Composable
+    const credentials = await useSignIn(loginForm.value.email.value, loginForm.value.password.value);
+    if (credentials?.user?.uid) {
+      isSuccess.value = true;
+      navigateTo("generateur");
+    } else {
+      isSuccess.value = false;
+      alert("Une erreure est survenue");
+    }
+  } catch (error) {
+    isSuccess.value = false;
+    alert(error.message);
+  } finally {
+    isLoading.value = false;
+  }
+};
+</script>

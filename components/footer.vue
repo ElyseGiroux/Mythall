@@ -1,5 +1,14 @@
 <template>
-  <footer class="flex flex-col items-center justify-center gap-4 bg-zinc-900 py-32 text-white">
+  <footer class="flex flex-col items-center justify-center gap-4 border-t border-accent bg-gradient-to-tl from-zinc-900 to-primary py-32 text-white">
+    <nuxt-link to="/">
+      <nuxt-img
+        class="h-auto w-28"
+        src="/img/logo-white.png"
+        alt="Mythall"
+        width="1462"
+        height="502"
+        format="webp" />
+    </nuxt-link>
     <div class="flex gap-4">
       <a
         href="https://www.facebook.com/mythall"

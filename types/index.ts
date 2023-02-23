@@ -1,10 +1,16 @@
 import { Timestamp } from "firebase-admin/firestore";
+import { User } from "firebase/auth";
 
 declare global {
   // Database layer
   interface EcoleDB {
     id: string;
     nom: string;
+  }
+
+  interface Roles {
+    animateur: boolean;
+    organisateur: boolean;
   }
 
   interface SortDB {
@@ -20,6 +26,10 @@ declare global {
     description: string;
     incantation: string;
     ecoleRef: string;
+  }
+
+  interface UserWithRoles extends User {
+    roles?: Roles;
   }
 
   // Frontend layer

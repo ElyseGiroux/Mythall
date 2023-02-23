@@ -3,9 +3,9 @@ export default defineNuxtConfig({
   modules: ["@nuxt/image-edge"],
   runtimeConfig: {
     FIREBASE: process.env.FIREBASE,
-    FIREBASEURL: process.env.FIREBASEURL,
     public: {
       siteURL: process.env.BASEURL,
+      firebaseApiKey: process.env.FIREBASE_API_KEY,
     },
   },
   css: ["~/assets/css/style.css"],

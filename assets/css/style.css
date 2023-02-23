@@ -5,6 +5,10 @@
 @import "tailwindcss/utilities";
 
 @layer base {
+  body {
+    @apply selection:bg-accent;
+  }
+
   h1 {
     @apply text-4xl;
   }
@@ -22,7 +26,7 @@
 
 @layer utilities {
   .btn-primary {
-    @apply rounded border border-zinc-700 bg-primary px-4 py-2 font-light text-white shadow transition hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-xl focus:-translate-x-[1px] focus:-translate-y-[1px] focus:shadow-xl;
+    @apply rounded border border-zinc-700 bg-gradient-to-br from-zinc-900 via-primary to-primary px-4 py-2 font-light text-white shadow transition hover:-translate-x-[1px] hover:-translate-y-[1px] hover:from-primary hover:to-zinc-900 hover:shadow-xl focus:-translate-x-[1px] focus:-translate-y-[1px] focus:shadow-xl;
   }
 
   form label {

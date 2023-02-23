@@ -20,6 +20,7 @@
   "dependencies": {
     "firebase": "^9.17.1",
     "firebase-admin": "^11.5.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "vuefire": "^3.0.1"
   }
 }
