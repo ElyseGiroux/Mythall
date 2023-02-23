@@ -4,6 +4,8 @@
     <NuxtPage />
   </main>
   <Footer />
+  <Notifications />
+  <Loading />
 </template>
 
 <script setup>

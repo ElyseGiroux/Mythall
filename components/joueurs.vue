@@ -5,6 +5,11 @@
       <div class="rounded-lg bg-white p-8 shadow-lg">...Mes personnage...</div>
       <div class="rounded-lg bg-white p-8 shadow-lg">...Mon profil...</div>
       <div class="rounded-lg bg-white p-8 shadow-lg">...Mes quêtes...</div>
+      <div class="rounded-lg bg-white p-8 shadow-lg">
+        <p>
+          <nuxt-link to="/generateur/joueur/sorts">Liste des sorts</nuxt-link>
+        </p>
+      </div>
     </div>
   </div>
 </template>

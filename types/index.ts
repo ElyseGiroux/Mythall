@@ -14,7 +14,6 @@ declare global {
   }
 
   interface SortDB {
-    id: string;
     createdAt: Timestamp;
     updatedAt: Timestamp;
     nom: string;
@@ -36,6 +35,7 @@ declare global {
   interface Ecole extends EcoleDB {}
 
   interface Sort extends SortDB {
+    id?: string;
     ecole: Ecole;
   }
 }

@@ -5,7 +5,7 @@
         <h1 class="font-bold text-zinc-900">Mot de passe oublie?</h1>
         <p>
           Ou
-          <nuxt-link to="connexion">connectez-vous</nuxt-link>
+          <nuxt-link to="/connexion">connectez-vous</nuxt-link>
         </p>
       </div>
       <form class="flex w-auto min-w-[320px] flex-col gap-4 rounded-lg bg-white px-6 py-4 shadow-lg">

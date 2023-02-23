@@ -3,8 +3,6 @@
     <div class="max-w-main px-main py-32">
       <ClientOnly>
         <Joueurs v-if="user" />
-        <Animateurs v-if="isAnimateur" />
-        <Organisateurs v-if="isOrganisateur" />
       </ClientOnly>
     </div>
   </section>
@@ -15,6 +13,4 @@ definePageMeta({
   middleware: ["joueur"],
 });
 const user = useFirebaseUser();
-const isAnimateur = useIsAnimateur().value;
-const isOrganisateur = useIsOrganisateur().value;
 </script>

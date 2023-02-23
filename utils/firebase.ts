@@ -6,16 +6,16 @@ export const setStateFirebaseUser = (user?: UserWithRoles) => {
 
 const setStateIsAnimateur = () => {
   if (useFirebaseUser().value?.roles?.animateur || useFirebaseUser().value?.roles?.organisateur) {
-    isAnimateur().value = true;
+    useIsAnimateur().value = true;
   } else {
-    isAnimateur().value = false;
+    useIsAnimateur().value = false;
   }
 };
 
 const setStateIsOrganisateur = () => {
   if (useFirebaseUser().value?.roles?.organisateur) {
-    isOrganisateur().value = true;
+    useIsOrganisateur().value = true;
   } else {
-    isOrganisateur().value = false;
+    useIsOrganisateur().value = false;
   }
 };

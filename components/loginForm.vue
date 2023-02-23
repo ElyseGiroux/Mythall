@@ -5,7 +5,7 @@
         <h1 class="font-bold text-zinc-900">Connectez-vous</h1>
         <p>
           Ou
-          <nuxt-link to="inscription">créer un compte</nuxt-link>
+          <nuxt-link to="/inscription">créer un compte</nuxt-link>
         </p>
       </div>
       <form
@@ -40,7 +40,7 @@
             required />
         </div>
         <p>
-          <nuxt-link to="mot-de-passe-oublie">Mot de passe oublié?</nuxt-link>
+          <nuxt-link to="/mot-de-passe-oublie">Mot de passe oublié?</nuxt-link>
         </p>
         <button
           class="btn-primary w-full"
@@ -72,11 +72,11 @@ const login = async () => {
       navigateTo("generateur");
     } else {
       isSuccess.value = false;
-      alert("Une erreure est survenue");
+      addNotification("<strong class='text-red-500'>Une erreure est survenue</strong>");
     }
   } catch (error) {
     isSuccess.value = false;
-    alert(error.message);
+    addNotification(`<strong class='text-red-500'>${error.message}</strong>`);
   } finally {
     isLoading.value = false;
   }

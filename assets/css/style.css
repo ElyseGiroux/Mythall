@@ -29,6 +29,14 @@
     @apply rounded border border-zinc-700 bg-gradient-to-br from-zinc-900 via-primary to-primary px-4 py-2 font-light text-white shadow transition hover:-translate-x-[1px] hover:-translate-y-[1px] hover:from-primary hover:to-zinc-900 hover:shadow-xl focus:-translate-x-[1px] focus:-translate-y-[1px] focus:shadow-xl;
   }
 
+  .btn-secondary {
+    @apply rounded border border-primary bg-transparent px-4 py-2 font-light  text-primary shadow transition hover:-translate-x-[1px] hover:-translate-y-[1px] hover:from-primary hover:shadow-xl focus:-translate-x-[1px] focus:-translate-y-[1px] focus:shadow-xl;
+  }
+
+  .card {
+    @apply rounded-lg  px-6 py-4 shadow-lg;
+  }
+
   form label {
     @apply text-sm font-medium text-gray-700;
   }

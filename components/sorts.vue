@@ -3,7 +3,7 @@
     <div
       v-for="sort in sorts"
       class="text-center">
-      <NuxtLink :to="`sorts/${sort.id}`">{{ sort.nom }}</NuxtLink>
+      <NuxtLink :to="`/generateur/joueur/sorts/${sort.id}`">{{ sort.nom }}</NuxtLink>
     </div>
   </div>
 </template>

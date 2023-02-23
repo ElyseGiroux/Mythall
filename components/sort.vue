@@ -1,6 +1,6 @@
 <template>
   <div class="my-8">
-    <p class="text-center text-lg font-bold">{{ props.sort.nom }} ({{ props.sort.ecole.nom }})</p>
+    <p class="text-lg font-bold">{{ props.sort.nom }} ({{ props.sort.ecole.nom }})</p>
     <p>
       <strong>Niveau:</strong>
       {{ props.sort.niveau }}

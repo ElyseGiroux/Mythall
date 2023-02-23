@@ -19,19 +19,19 @@
       <ClientOnly>
         <NuxtLink
           class="border-b border-accent border-transparent font-bold text-white transition-colors hover:border-accent hover:text-accent"
-          to="generateur">
+          to="/generateur">
           Générateur
         </NuxtLink>
         <NuxtLink
           v-if="!firebaseUser"
           class="border-b border-accent border-transparent font-bold text-white transition-colors hover:border-accent hover:text-accent"
-          to="connexion">
+          to="/connexion">
           Connexion
         </NuxtLink>
         <NuxtLink
           v-if="!firebaseUser"
           class="border-b border-accent border-transparent font-bold text-white transition-colors hover:border-accent hover:text-accent"
-          to="inscription">
+          to="/inscription">
           Inscription
         </NuxtLink>
         <button
