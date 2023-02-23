@@ -57,4 +57,12 @@
   .px-main {
     @apply px-4 sm:px-6;
   }
+
+  .py-main {
+    @apply py-8 sm:py-16;
+  }
+
+  .main-section {
+    @apply max-w-main px-main py-main;
+  }
 }

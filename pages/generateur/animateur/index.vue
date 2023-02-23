@@ -1,6 +1,6 @@
 <template>
   <section class="">
-    <div class="max-w-main px-main py-32">
+    <div class="main-section">
       <ClientOnly>
         <Animateurs v-if="isAnimateur" />
       </ClientOnly>

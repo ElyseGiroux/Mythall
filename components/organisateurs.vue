@@ -8,7 +8,11 @@
           <nuxt-link to="/generateur/organisateur/sorts">Liste des sorts</nuxt-link>
         </p>
       </div>
-      <div class="rounded-lg bg-white p-8 shadow-lg">...</div>
+      <div class="rounded-lg bg-white p-8 shadow-lg">
+        <p>
+          <nuxt-link to="/generateur/organisateur/ecoles">Liste des écoles</nuxt-link>
+        </p>
+      </div>
     </div>
   </div>
 </template>

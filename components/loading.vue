@@ -10,6 +10,6 @@
 </template>
 
 <script lang="ts" setup>
-const isLoading = useIsLoading().value;
-const message = useLoadingMessage().value;
+const isLoading = useIsLoading();
+const message = useLoadingMessage();
 </script>

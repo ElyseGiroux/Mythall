@@ -1,7 +1,6 @@
 <template>
-  <Loading :isLoading="isLoading" />
-  <section class="my-8 mx-auto max-w-7xl">
-    <h1 class="my-8 text-center">{{ title }}</h1>
+  <section class="main-section">
+    <h1 class="my-8">{{ title }}</h1>
     <p class="mb-8">
       <NuxtLink
         class="btn-secondary"
@@ -147,7 +146,7 @@ definePageMeta({
 // Set Refs
 const route = useRoute();
 const sort = ref<Sort | null>({} as Sort);
-const isLoading = ref(false);
+const isLoading = useIsLoading();
 
 // Set Creation or Modification based of params id "creation"
 const creation = route.params.id == "creation" ? true : false;
@@ -155,8 +154,8 @@ const title = ref(creation ? "Création de sort" : "Modification de sort");
 
 // Fetch Data
 if (!creation) {
-  const { data: sortData } = await useFetch(`/api/sorts/${route.params.id}`);
-  sort.value = sortData.value;
+  const { data } = await useFetch(`/api/sorts/${route.params.id}`);
+  sort.value = data.value;
 }
 const { data: ecoles } = await useFetch(`/api/ecoles`); // Fill Ecoles options
 

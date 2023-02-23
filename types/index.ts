@@ -4,7 +4,8 @@ import { User } from "firebase/auth";
 declare global {
   // Database layer
   interface EcoleDB {
-    id: string;
+    createdAt: Timestamp;
+    updatedAt: Timestamp;
     nom: string;
   }
 
@@ -32,7 +33,9 @@ declare global {
   }
 
   // Frontend layer
-  interface Ecole extends EcoleDB {}
+  interface Ecole extends EcoleDB {
+    id?: string;
+  }
 
   interface Sort extends SortDB {
     id?: string;

@@ -5,12 +5,12 @@
     @cancel="cancel()"
     @confirm="confirm()" />
   <section class="main-section">
-    <h1 class="my-8">Liste des sorts</h1>
+    <h1 class="my-8">Liste des écoles</h1>
     <div class="my-8">
       <nuxt-link
         class="btn-secondary"
-        to="/generateur/organisateur/sorts/creation">
-        Création de sort
+        to="/generateur/organisateur/ecoles/creation">
+        Création d'une école
       </nuxt-link>
     </div>
     <div class="card my-8 overflow-x-auto bg-white">
@@ -31,17 +31,14 @@
         </thead>
         <tbody class="divide-y divide-gray-200">
           <tr
-            v-for="sort in sorts"
-            :key="sort.id">
-            <td class="whitespace-nowrap py-4 pl-6 pr-3 text-sm font-medium text-gray-900 sm:pl-0">{{ sort.nom }}</td>
+            v-for="ecole in ecoles"
+            :key="ecole.id">
+            <td class="whitespace-nowrap py-4 pl-6 pr-3 text-sm font-medium text-gray-900 sm:pl-0">{{ ecole.nom }}</td>
             <td class="flex gap-4 whitespace-nowrap py-4 px-3 text-sm text-gray-500">
-              <nuxt-link :to="`/generateur/joueur/sorts/${sort.id}`">
-                <IconEye :class="`h-6 w-6 fill-primary transition-colors hover:fill-accent`" />
-              </nuxt-link>
-              <nuxt-link :to="`/generateur/organisateur/sorts/${sort.id}`">
+              <nuxt-link :to="`/generateur/organisateur/ecoles/${ecole.id}`">
                 <IconPencilSquare :class="`h-6 w-6 fill-primary transition-colors hover:fill-accent`" />
               </nuxt-link>
-              <button @click="openModal(sort)">
+              <button @click="openModal(ecole)">
                 <IconTrash :class="`h-6 w-6 fill-primary transition-colors hover:fill-accent`" />
               </button>
             </td>
@@ -58,24 +55,24 @@ definePageMeta({
 });
 
 // Data
-const { data: sorts } = await useFetch<Sort[]>("/api/sorts");
+const { data: ecoles } = await useFetch<Ecole[]>("/api/ecoles");
 
 // Refs
 const isOpen = ref(false);
 const isLoading = useIsLoading();
 const message = ref("");
-const selectedSort = ref<Sort | null>(null);
+const selectedEcole = ref<Ecole | null>(null);
 
 // Events
-const openModal = (sort: Sort) => {
+const openModal = (ecole: Ecole) => {
   isOpen.value = true;
-  selectedSort.value = sort;
-  message.value = `Êtes-vous certain(e) de vouloir <strong>supprimer</strong> de façon <strong>définitive</strong> le sort <strong>${selectedSort.value.nom}</strong> ?`;
+  selectedEcole.value = ecole;
+  message.value = `Êtes-vous certain(e) de vouloir <strong>supprimer</strong> de façon <strong>définitive</strong> l'école <strong>${selectedEcole.value.nom}</strong> ?`;
 };
 
 const cancel = () => {
   isOpen.value = false;
-  selectedSort.value = null;
+  selectedEcole.value = null;
 };
 
 const confirm = async () => {
@@ -84,15 +81,15 @@ const confirm = async () => {
   isLoading.value = true;
 
   // Send Delete Request
-  if (selectedSort.value?.id) {
-    const { data: res } = await useFetch(`/api/sorts/${selectedSort.value.id}`, {
+  if (selectedEcole.value?.id) {
+    const { data: res } = await useFetch(`/api/ecoles/${selectedEcole.value.id}`, {
       method: "DELETE",
     });
 
     if (res.value === true) {
-      sorts.value = sorts.value?.filter((s) => s.id != selectedSort.value?.id) as Sort[];
+      ecoles.value = ecoles.value?.filter((s) => s.id != selectedEcole.value?.id) as Ecole[];
       addNotification(
-        `Le sort <strong>${selectedSort.value.nom}</strong> à été <strong>supprimé</strong> avec <strong class='text-green-500'>succès</strong>!`
+        `Le ecole <strong>${selectedEcole.value.nom}</strong> à été <strong>supprimé</strong> avec <strong class='text-green-500'>succès</strong>!`
       );
     } else {
       addNotification("<strong class='text-red-500'>Une erreure est survenue.</strong>");

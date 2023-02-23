@@ -1,7 +1,7 @@
 <template>
   <section class="relative bg-[url('/img/hero-bg.webp')] bg-cover bg-top text-white">
     <div class="absolute inset-0 sm:bg-transparent sm:bg-gradient-to-br sm:from-black/70 sm:to-black/40"></div>
-    <div class="max-w-main px-main relative py-48">
+    <div class="max-w-main px-main relative py-40">
       <div class="flex flex-col items-center justify-center gap-4">
         <nuxt-img
           class="max-w-xl"
