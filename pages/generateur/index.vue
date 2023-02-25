@@ -1,11 +1,9 @@
 <template>
   <section class="">
     <div class="main-section">
-      <ClientOnly>
-        <Joueurs v-if="user" />
-        <Animateurs v-if="isAnimateur" />
-        <Organisateurs v-if="isOrganisateur" />
-      </ClientOnly>
+      <Joueurs v-if="user" />
+      <Animateurs v-if="isAnimateur" />
+      <Organisateurs v-if="isOrganisateur" />
     </div>
   </section>
 </template>

@@ -1,9 +1,7 @@
 <template>
   <section class="">
     <div class="main-section">
-      <ClientOnly>
-        <Organisateurs v-if="isOrganisateur" />
-      </ClientOnly>
+      <Organisateurs v-if="isOrganisateur" />
     </div>
   </section>
 </template>

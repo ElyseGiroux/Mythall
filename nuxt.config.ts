@@ -8,6 +8,9 @@ export default defineNuxtConfig({
       firebaseApiKey: process.env.FIREBASE_API_KEY,
     },
   },
+  routeRules: {
+    "/generateur/**": { ssr: false }, // Generateur is SPA only - No SEO
+  },
   css: ["~/assets/css/style.css"],
   postcss: {
     plugins: {

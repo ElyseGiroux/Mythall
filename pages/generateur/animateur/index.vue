@@ -1,9 +1,7 @@
 <template>
   <section class="">
     <div class="main-section">
-      <ClientOnly>
-        <Animateurs v-if="isAnimateur" />
-      </ClientOnly>
+      <Animateurs v-if="isAnimateur" />
     </div>
   </section>
 </template>
