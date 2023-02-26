@@ -2,7 +2,7 @@
   <section class="">
     <div class="main-section">
       <div class="my-8">
-        <h2 class="mb-4 text-2xl font-bold">Mes personnages</h2>
+        <h2 class="mb-4 text-2xl font-bold">Liste des personnages</h2>
         <div class="card my-8 overflow-x-auto bg-white">
           <table class="w-full divide-y divide-gray-300">
             <thead>
@@ -48,6 +48,5 @@
 definePageMeta({
   middleware: ["joueur"],
 });
-const user = useFirebaseUser();
-const { data: personnages } = await useFetch(`/api/personnages?userId=${user.value.uid}`);
+const { data: personnages } = await useFetch(`/api/personnages`);
 </script>

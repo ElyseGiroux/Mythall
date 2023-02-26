@@ -7,33 +7,33 @@ export default defineEventHandler(async (event) => {
 
   if (params && params.id) {
     // Convert body data to typed object for typings
-    const sort: Sort = body.sort;
+    const personnage: Personnage = body.personnage;
 
     // Map data to DB data to remove unwanted properties
-    const sortDB: SortDB = {
-      createdAt: sort.createdAt ? sort.createdAt : Timestamp.fromDate(new Date()),
+    const personnageDB: PersonnageDB = {
+      createdAt: personnage.createdAt ? personnage.createdAt : Timestamp.fromDate(new Date()),
       updatedAt: Timestamp.fromDate(new Date()),
-      nom: sort.nom,
-      niveau: sort.niveau,
-      porte: sort.porte,
-      duree: sort.duree,
-      zone: sort.zone,
-      sommaire: sort.sommaire,
-      description: sort.description,
-      incantation: sort.incantation,
-      ecoleRef: sort.ecoleRef,
+      nom: personnage.nom,
+      // niveau: personnage.niveau,
+      // porte: personnage.porte,
+      // duree: personnage.duree,
+      // zone: personnage.zone,
+      // sommaire: personnage.sommaire,
+      // description: personnage.description,
+      // incantation: personnage.incantation,
+      // ecoleRef: personnage.ecoleRef,
     };
 
     if (params.id == "creation") {
       await firestore
         .collection("personnages")
         .doc()
-        .create(sortDB as any);
+        .create(personnageDB as any);
     } else {
       await firestore
         .collection("personnages")
         .doc(params.id)
-        .update(sortDB as any);
+        .update(personnageDB as any);
     }
 
     return true;

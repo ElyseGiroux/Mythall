@@ -9,6 +9,6 @@ export default defineEventHandler(async (event) => {
       id: snap.id,
       ...snap.data(),
       // ecole: ecoleSnap.data(),
-    } as Sort;
+    } as Personnage;
   }
 });

@@ -1,11 +1,9 @@
 import { firestore } from "../../utils/firebase";
 
-export default defineEventHandler(async (event) => {
-  const params = event.context.params;
-  if (params && params.id) {
-    const snap = await firestore.collection("users").doc(params.id).get();
+export default defineEventHandler(async () => {
+  const snap = await firestore.collection("users").get();
+  return snap.docs.map((snap) => {
     return {
-      id: snap.id,
       createdAt: snap.data()?.createdAt,
       updatedAt: snap.data()?.updatedAt,
       uid: snap.data()?.uid,
@@ -14,5 +12,5 @@ export default defineEventHandler(async (event) => {
       photoURL: snap.data()?.photoURL,
       roles: snap.data()?.roles,
     } as UserDB;
-  }
+  });
 });

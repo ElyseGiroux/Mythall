@@ -70,7 +70,7 @@ declare global {
   interface ClasseItem {
     classe?: Classe;
     classeRef: string;
-    niveau: Number;
+    niveau: number;
   }
 
   interface Divinite extends DiviniteDB {
@@ -211,6 +211,18 @@ declare global {
   // ...Progression sort recopiable...
   interface Personnage extends PersonnageDB {
     id?: string;
+    alignement?: Alignement;
+    divinite?: Divinite;
+    ecole?: Ecole;
+    esprit?: Esprit;
+    niveauDisponible?: number;
+    niveauEffectif?: number;
+    niveauReel?: number;
+    niveauProfane?: number;
+    niveauDivin?: number;
+    ordres?: Ordre[];
+    race?: Race;
+    user?: UserDB;
   }
   interface PersonnageDB {
     createdAt: Timestamp;
@@ -227,7 +239,7 @@ declare global {
     ecoleRef?: string;
     espritRef?: string;
     dieuRef?: string; // ... Need migration throught a script to diviniteRef in DB
-    ordreRef?: string;
+    ordresRef?: string[];
     domainesRef?: string[];
     vie?: number;
     gnEffectif?: number;
@@ -235,6 +247,7 @@ declare global {
 
   interface Race extends RaceDB {
     id?: string;
+    sortsRacial?: Sort[];
     statistiques?: StatistiqueItem[];
     resistances?: ResistanceItem[];
   }
@@ -321,6 +334,15 @@ declare global {
     niveauObtention: number;
   }
 
+  interface UserDB {
+    createdAt: Timestamp;
+    updatedAt: Timestamp;
+    uid: string;
+    email: string;
+    displayname: string;
+    photoURL?: string;
+    roles?: Roles;
+  }
   interface UserWithRoles extends User {
     roles?: Roles;
   }
