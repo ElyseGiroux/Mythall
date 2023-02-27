@@ -1,7 +1,17 @@
 <template>
-  <section class="main-section my-8">
-    <p class="mb-8">
-      <NuxtLink to="/generateur/joueur/personnages">Retour à la liste des personnages</NuxtLink>
+  <section class="main-section">
+    <p class="mb-8 flex gap-4">
+      <NuxtLink
+        class="btn-secondary"
+        to="/generateur/joueur/personnages">
+        Retour à mes personnages
+      </NuxtLink>
+      <NuxtLink
+        v-if="isAnimateur"
+        class="btn-secondary"
+        to="/generateur/animateur/personnages">
+        Liste des personnages (DM)
+      </NuxtLink>
     </p>
 
     <div
@@ -9,7 +19,7 @@
       class="card bg-white">
       <!--Informations-->
       <div>
-        <h2>
+        <h2 class="mt-4 mb-2">
           <strong>Informations</strong>
         </h2>
         <div class="grid md:grid-cols-2 md:gap-4">
@@ -75,15 +85,15 @@
             </div>
 
             <!--Ecole-->
-            <div class="hidden">
+            <div v-if="personnage.ecole">
               <strong class="mr-1">École:</strong>
               <span>{{ personnage?.ecole?.nom }}</span>
             </div>
 
             <!--Domaines-->
-            <div class="hidden">
+            <div v-if="personnage.domaines && personnage.domaines.length > 0">
               <strong class="mr-1">Domaines:</strong>
-              <span id="domaine"></span>
+              <span>{{ personnage.domaines.map((d) => `${d.nom}`).join(", ") }}</span>
             </div>
 
             <!--Ordres-->
@@ -108,15 +118,28 @@
       </div>
 
       <!--Statistique-->
-      <div>
-        <h2>
+      <div v-if="personnage.statistiques">
+        <h2 class="mt-4 mb-2">
           <strong>Statistiques</strong>
         </h2>
 
-        <div class="grid gap-4 md:grid-cols-2">
-          <div
-            id="statistiquesBase"
-            class="flex flex-col"></div>
+        <div class="grid gap-4">
+          <div class="grid md:grid-cols-2">
+            <div>
+              <div v-for="statistique in personnage.statistiques.slice(0, 5)">
+                <strong class="mr-1">{{ statistique.statistique?.nom }}:</strong>
+                <span>{{ statistique.valeur }}</span>
+              </div>
+            </div>
+            <div>
+              <div v-for="statistique in personnage.statistiques.slice(5, 11)">
+                <div v-if="statistique.valeur > 0">
+                  <strong class="mr-1">{{ statistique.statistique?.nom }}:</strong>
+                  <span>{{ statistique.valeur }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div
             id="statistiqueSpecialise"
             class="flex flex-col"></div>
@@ -125,80 +148,78 @@
 
       <!--Résistances & Immunités-->
       <div class="grid gap-4 md:grid-cols-2">
-        <div
-          id="resistancesSection"
-          class="hidden">
-          <h2>
+        <div v-if="personnage.resistances">
+          <h2 class="mt-4 mb-2">
             <strong>Résistance(s)</strong>
           </h2>
-          <div
-            id="resistances"
-            class="flex flex-col"></div>
+          <div class="flex flex-col">
+            <div v-for="resistance in personnage.resistances">
+              <strong class="mr-1">{{ resistance.resistance?.nom }}:</strong>
+              <span>{{ resistance.valeur }}</span>
+            </div>
+          </div>
         </div>
-        <div
-          id="immunitesSection"
-          class="hidden">
-          <h2>
+        <div v-if="personnage.immunites">
+          <h2 class="mt-4 mb-2">
             <strong>Immunité(s)</strong>
           </h2>
-          <div
-            id="immunites"
-            class="flex flex-col"></div>
+          <div class="flex flex-col">
+            <div v-for="immunite in personnage.immunites">
+              <span>{{ immunite.nom }}</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <!--Capacité(s) Spéciale(s)-->
-      <div
-        id="capacitesSpecialesSection"
-        class="hidden">
-        <h2>
+      <div v-if="personnage.capaciteSpeciales">
+        <h2 class="mt-4 mb-2">
           <strong>Capacité(s) Spéciale(s)</strong>
         </h2>
-        <div
-          id="capacitesSpeciales"
-          class="flex flex-col"></div>
+        <div class="flex flex-col">
+          <div>
+            <div v-for="statistique in personnage.capaciteSpeciales">
+              <strong class="mr-1">{{ statistique.statistique?.nom }}:</strong>
+              <span>{{ statistique.valeur }}</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!--Dons(s)-->
-      <div>
-        <template id="templateDon">
-          <div class="flex flex-col">
-            <p>
-              <strong id="donNom"></strong>
-              <span id="donNiveau"></span>
-            </p>
-            <span id="donDescription"></span>
-          </div>
-        </template>
-
-        <h2><strong>Dons</strong></h2>
+      <div v-if="personnage.dons">
+        <h2 class="mt-4 mb-2">
+          <strong>Don(s)</strong>
+        </h2>
         <div
-          id="dons"
-          class="personnge__dons"></div>
+          class="my-4"
+          v-for="donItem in personnage.dons">
+          <p>
+            <strong>{{ donItem.don?.nom }}</strong>
+            <span v-if="donItem.niveauObtention > 1">({{ donItem.niveauObtention }})</span>
+          </p>
+          <span>{{ donItem.don?.description }}</span>
+        </div>
       </div>
 
       <!--Aptitudes(s)-->
-      <div
-        id="aptitudesSection"
-        class="hidden">
-        <template id="templateAptitude">
-          <div class="flex flex-col">
-            <p><strong id="aptitudeNom"></strong></p>
-            <span id="aptitudeDescription"></span>
-          </div>
-        </template>
-
-        <h2>
+      <div v-if="personnage.aptitudes">
+        <h2 class="mt-4 mb-2">
           <strong>Aptitude(s) Spéciale(s)</strong>
         </h2>
         <div
-          id="aptitudes"
-          class="personnge__aptitudes"></div>
+          v-for="aptitude in personnage.aptitudes"
+          class="my-4">
+          <p>
+            <strong>{{ aptitude.aptitude?.nom }}</strong>
+          </p>
+          <p>{{ aptitude.aptitude?.description }}</p>
+        </div>
       </div>
 
       <!--Fourberies(s)-->
       <div v-if="personnage.fourberies">
-        <h2>
+        <h2 class="mt-4 mb-2">
           <strong>Fourberies</strong>
         </h2>
         <div v-for="fourberieItem in personnage.fourberies">
@@ -211,7 +232,7 @@
 
       <!--Sort(s) Racial-->
       <div v-if="personnage.fourberies">
-        <h2>
+        <h2 class="mt-4 mb-2">
           <strong>Sort(s) Racial(aux)</strong>
         </h2>
         <div v-for="sort in personnage.race?.sortsRacial">
@@ -220,15 +241,15 @@
       </div>
 
       <!--Sort(s)-->
-      <div
-        id="sortsSection"
-        class="hidden">
-        <h2>
+      <div v-if="personnage.sorts">
+        <h2 class="mt-4 mb-2">
           <strong>Sort(s)</strong>
         </h2>
-        <div
-          id="sorts"
-          class="personnage__sorts"></div>
+        <div v-for="sort in personnage.sorts">
+          <Sort
+            v-if="sort.sort"
+            :sort="sort.sort" />
+        </div>
       </div>
     </div>
   </section>
@@ -239,6 +260,7 @@ definePageMeta({
   middleware: ["joueur"],
 });
 const route = useRoute();
+const isAnimateur = useIsAnimateur();
 const isLoading = useIsLoading();
 const user = useFirebaseUser();
 

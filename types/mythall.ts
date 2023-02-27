@@ -11,7 +11,7 @@ declare global {
     nom: string;
   }
 
-  interface Aptitude {
+  interface Aptitude extends AptitudeDB {
     id?: string;
   }
   interface AptitudeDB {
@@ -132,8 +132,8 @@ declare global {
   interface DonItem {
     don?: Don;
     donRef: string;
-    niveauObtention?: number;
-    niveauEffectif?: number;
+    niveauObtention: number;
+    niveauEffectif: number;
   }
 
   interface Ecole extends EcoleDB {
@@ -212,16 +212,22 @@ declare global {
   interface Personnage extends PersonnageDB {
     id?: string;
     alignement?: Alignement;
+    aptitudes?: AptitudeItem[];
     divinite?: Divinite;
+    domaines: Domaine[];
     ecole?: Ecole;
     esprit?: Esprit;
-    niveauDisponible?: number;
-    niveauEffectif?: number;
-    niveauReel?: number;
-    niveauProfane?: number;
-    niveauDivin?: number;
+    niveauDisponible: number;
+    niveauEffectif: number;
+    niveauReel: number;
+    niveauProfane: number;
+    niveauDivin: number;
     ordres?: Ordre[];
     race?: Race;
+    capaciteSpeciales?: StatistiqueItem[];
+    statistiques?: StatistiqueItem[];
+    resistances?: ResistanceItem[];
+    immunites?: Immunite[];
     user?: UserDB;
   }
   interface PersonnageDB {
@@ -297,13 +303,9 @@ declare global {
   interface StatistiqueItem {
     statistique?: Statistique;
     statistiqueRef: string;
-    niveau: number;
     valeur: number;
-    cummulable: boolean;
-  }
-  interface StatistiqueValue {
-    statistique?: Statistique;
-    valeur: number;
+    niveau?: number;
+    cummulable?: boolean;
   }
 
   interface Roles {

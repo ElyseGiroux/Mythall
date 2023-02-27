@@ -59,7 +59,7 @@
   }
 
   .py-main {
-    @apply py-8 sm:py-16;
+    @apply pt-4 pb-8 sm:pt-8 sm:pb-16;
   }
 
   .main-section {
