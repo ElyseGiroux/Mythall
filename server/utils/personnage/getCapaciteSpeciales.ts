@@ -1,5 +1,3 @@
-import { statistiqueIds } from "./getStatistiques";
-
 export const _getCapaciteSpeciales = async (personnage: Personnage) => {
   if (!personnage.capaciteSpeciales) personnage.capaciteSpeciales = [];
 

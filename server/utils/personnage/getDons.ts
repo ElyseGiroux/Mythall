@@ -1,7 +1,7 @@
 import { firestore } from "../firebase";
 
 export const _getDons = async (personnage: Personnage) => {
-  let dons: DonItem[] = [];
+  let dons = personnage.dons || [];
 
   // Dons racial
   if (personnage.race) {
@@ -80,11 +80,11 @@ export const _getDons = async (personnage: Personnage) => {
   const donsData = await Promise.all(dons.map((di) => _getDon(di.donRef)));
 
   // Asdign each dons to it's coresponding data
-  dons.forEach((di, i) => {
+  dons.map((di, i) => {
     di.don = donsData[i];
   });
 
-  return dons; // .sort((a, b) => (a?.don?.nom > b?.don?.nom ? 1 : -1));
+  return dons;
 };
 
 export const _getDon = async (id: string) => {

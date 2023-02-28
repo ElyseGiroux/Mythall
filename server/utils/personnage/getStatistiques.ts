@@ -4,9 +4,9 @@ export const statistiqueIds = {
   force: "gOg0TFSbU8mvlv8baCXE",
   intelligence: "yKfNuFBQY5UknrTNOxpA",
   sagesse: "HkaChqWpHOlINdla02ja",
-  pVTorse: "sCcNIQDoWKUIIcSpkB2m",
-  pVBras: "ZSnV9s6cyzYihdFR6wfr",
-  pVJambes: "69jKTq64XUCk51EmY0Z1",
+  pvTorse: "sCcNIQDoWKUIIcSpkB2m",
+  pvBras: "ZSnV9s6cyzYihdFR6wfr",
+  pvJambes: "69jKTq64XUCk51EmY0Z1",
   lutte: "Rp8BG8OtlNKl8aeuojdi",
   mana: "3f75skgSz3CWqdERXcqG",
   ki: "py44fmGyDCUnkkBZmto9",
@@ -20,9 +20,9 @@ export const _getStatistiquesDeBase = async () => {
     _getStatistique(statistiqueIds.force),
     _getStatistique(statistiqueIds.intelligence),
     _getStatistique(statistiqueIds.sagesse),
-    _getStatistique(statistiqueIds.pVTorse),
-    _getStatistique(statistiqueIds.pVBras),
-    _getStatistique(statistiqueIds.pVJambes),
+    _getStatistique(statistiqueIds.pvTorse),
+    _getStatistique(statistiqueIds.pvBras),
+    _getStatistique(statistiqueIds.pvJambes),
     _getStatistique(statistiqueIds.lutte),
     _getStatistique(statistiqueIds.mana),
     _getStatistique(statistiqueIds.ki),
@@ -35,9 +35,9 @@ export const _getStatistiquesDeBase = async () => {
       valeur: 0,
     };
 
-    if (si.statistiqueRef == statistiqueIds.pVTorse) si.valeur = 3;
-    if (si.statistiqueRef == statistiqueIds.pVBras) si.valeur = 2;
-    if (si.statistiqueRef == statistiqueIds.pVJambes) si.valeur = 2;
+    if (si.statistiqueRef == statistiqueIds.pvTorse) si.valeur = 3;
+    if (si.statistiqueRef == statistiqueIds.pvBras) si.valeur = 2;
+    if (si.statistiqueRef == statistiqueIds.pvJambes) si.valeur = 2;
     if (si.statistiqueRef == statistiqueIds.lutte) si.valeur = 3;
 
     return si;
@@ -102,23 +102,23 @@ export const _getStatistiques = async (personnage: Personnage) => {
     const dexterite = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.dexterite);
     const intelligence = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.intelligence);
     const sagesse = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.sagesse);
-    const pvTorse = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.pVTorse);
-    const pVBras = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.pVBras);
-    const pVJambes = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.pVJambes);
+    const pvTorse = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.pvTorse);
+    const pvBras = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.pvBras);
+    const pvJambes = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.pvJambes);
     const lutte = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.lutte);
     const mana = personnage.statistiques.find((s) => s.statistiqueRef == statistiqueIds.mana);
 
     // Points de vie
     if (constitution) {
       if (pvTorse) pvTorse.valeur += constitution.valeur;
-      if (pVBras) pVBras.valeur += constitution.valeur;
-      if (pVJambes) pVJambes.valeur += constitution.valeur;
+      if (pvBras) pvBras.valeur += constitution.valeur;
+      if (pvJambes) pvJambes.valeur += constitution.valeur;
     }
 
     // Correcteur de points de vie
     if (pvTorse && pvTorse?.valeur <= 0) pvTorse.valeur = 1;
-    if (pVBras && pVBras?.valeur <= 0) pVBras.valeur = 1;
-    if (pVJambes && pVJambes?.valeur <= 0) pVJambes.valeur = 1;
+    if (pvBras && pvBras?.valeur <= 0) pvBras.valeur = 1;
+    if (pvJambes && pvJambes?.valeur <= 0) pvJambes.valeur = 1;
 
     // Points de lutte
     if (lutte) {

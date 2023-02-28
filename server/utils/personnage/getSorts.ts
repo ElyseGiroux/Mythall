@@ -1,7 +1,7 @@
 import { firestore } from "../firebase";
 
 export const _getSorts = async (personnage: Personnage) => {
-  let sorts: SortItem[] = [];
+  let sorts: SortItem[] = personnage.sorts || [];
 
   // Sorts des Classes (Obtenue via progression)
   if (personnage.classes) {
