@@ -56,13 +56,12 @@
 // States
 const loginForm = ref(null);
 const isSent = useState("isSent", () => false);
-const isLoading = useState("isLoading", () => false);
 const isSuccess = useState("isSuccess", () => false);
 
 const login = async () => {
   // Set States
   isSent.value = true;
-  isLoading.value = true;
+  updateLoading(true);
 
   try {
     // Firebase Composable
@@ -78,7 +77,7 @@ const login = async () => {
     isSuccess.value = false;
     addNotification(`<strong class='text-red-500'>${error.message}</strong>`);
   } finally {
-    isLoading.value = false;
+    updateLoading(false);
   }
 };
 </script>

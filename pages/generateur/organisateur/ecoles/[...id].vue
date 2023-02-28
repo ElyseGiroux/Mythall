@@ -25,7 +25,7 @@
           required />
       </div>
       <button
-        :disabled="isLoading"
+        :disabled="isLoading()"
         class="btn-primary"
         type="submit">
         Envoyer
@@ -42,7 +42,6 @@ definePageMeta({
 // Set Refs
 const route = useRoute();
 const ecole = ref<Ecole | null>({} as Ecole);
-const isLoading = useIsLoading();
 
 // Set Creation or Modification based of params id "creation"
 const creation = route.params.id == "creation" ? true : false;
@@ -56,8 +55,7 @@ if (!creation) {
 
 // Events
 const submit = async () => {
-  // Set loading state
-  isLoading.value = true;
+  updateLoading(true);
 
   // Post data
   const { data: res } = await useFetch(`/api/ecoles/${route.params.id}`, {
@@ -66,9 +64,7 @@ const submit = async () => {
       ecole: ecole.value,
     },
   });
-
-  // Set loading state
-  isLoading.value = false;
+  updateLoading(false);
 
   // Result
   if (res.value === true) {

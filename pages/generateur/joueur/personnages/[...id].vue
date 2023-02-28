@@ -322,8 +322,8 @@ definePageMeta({
 });
 const route = useRoute();
 const isAnimateur = useIsAnimateur();
-const isLoading = useIsLoading();
-const user = useFirebaseUser();
 
+updateLoading(true, "Téléchargement du personnage...");
 const { data: personnage } = await useFetch(`/api/personnages/fiche/${route.params.id}`);
+updateLoading(false);
 </script>

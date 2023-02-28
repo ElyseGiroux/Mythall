@@ -6,6 +6,6 @@ export default defineEventHandler(async () => {
     return {
       id: snap.id,
       ...snap.data(),
-    };
+    } as Sort;
   });
 });

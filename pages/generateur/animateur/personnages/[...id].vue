@@ -9,8 +9,8 @@
       </NuxtLink>
     </div>
     <form
-      ref="form"
       v-if="personnage"
+      ref="form"
       @submit.prevent="submit()"
       class="card flex w-auto min-w-[320px] flex-col gap-4 bg-white">
       <Tabs
@@ -197,7 +197,7 @@
             required />
         </div>
         <button
-          :disabled="!form?.checkValidity() || isLoading"
+          :disabled="!form?.checkValidity() || isLoading()"
           class="btn-primary"
           type="submit">
           Envoyer
@@ -488,15 +488,12 @@ definePageMeta({
 });
 
 // Set Refs
-// const form = ref<FormData>();
 const form: Ref<HTMLFormElement | undefined> = ref();
 const route = useRoute();
 const personnage = ref<Personnage | null>({
   domainesRef: [] as string[],
   ordresRef: [] as string[],
 } as Personnage);
-const isLoading = useIsLoading();
-const loadingMessage = useLoadingMessage();
 const tabs: Ref<Tab[]> = ref([
   { name: "Personnage", link: "personnage" },
   { name: "Classe(s)", link: "classes" },
@@ -512,39 +509,46 @@ const creation = route.params.id == "creation" ? true : false;
 const title = ref(creation ? "Création de personnage" : "Modification de personnage");
 
 // Fetch Data
+updateLoading(true, "Téléchargement du personnage...");
 if (!creation) {
-  isLoading.value = true;
-  loadingMessage.value = "Téléchargement du personnage...";
   const { data } = await useFetch(`/api/personnages/${route.params.id}`);
   personnage.value = data.value;
 }
 
-isLoading.value = true;
-loadingMessage.value = "Téléchargement des listes...";
-
-const { data: users } = await useFetch(`/api/users`);
-const { data: races } = await useFetch(`/api/races`);
-const { data: alignements } = await useFetch(`/api/alignements`);
-const { data: divinites } = await useFetch(`/api/divinites`);
-const { data: domaines } = await useFetch(`/api/domaines`);
-const { data: ecoles } = await useFetch(`/api/ecoles`);
-const { data: esprits } = await useFetch(`/api/esprits`);
-const { data: ordres } = await useFetch(`/api/ordres`);
-const { data: classes } = await useFetch(`/api/classes`);
-const { data: dons } = await useFetch(`/api/dons`);
-const { data: sorts } = await useFetch(`/api/sorts`);
-const { data: aptitudes } = await useFetch(`/api/aptitudes`);
-const { data: fourberies } = await useFetch(`/api/fourberies`);
-
-isLoading.value = false;
+updateLoading(true, "Téléchargement du système de Mythall...");
+const fetchData = await Promise.all([
+  useFetch(`/api/users`),
+  useFetch(`/api/races`),
+  useFetch(`/api/alignements`),
+  useFetch(`/api/divinites`),
+  useFetch(`/api/domaines`),
+  useFetch(`/api/ecoles`),
+  useFetch(`/api/esprits`),
+  useFetch(`/api/ordres`),
+  useFetch(`/api/classes`),
+  useFetch(`/api/dons`),
+  useFetch(`/api/sorts`),
+  useFetch(`/api/aptitudes`),
+  useFetch(`/api/fourberies`),
+]);
+const { data: users } = fetchData[0];
+const { data: races } = fetchData[1];
+const { data: alignements } = fetchData[2];
+const { data: divinites } = fetchData[3];
+const { data: domaines } = fetchData[4];
+const { data: ecoles } = fetchData[5];
+const { data: esprits } = fetchData[6];
+const { data: ordres } = fetchData[7];
+const { data: classes } = fetchData[8];
+const { data: dons } = fetchData[9];
+const { data: sorts } = fetchData[10];
+const { data: aptitudes } = fetchData[11];
+const { data: fourberies } = fetchData[12];
+updateLoading(false);
 
 // Events
 const submit = async () => {
-  console.log(form.value?.checkValidity());
-
-  // Set loading state
-  isLoading.value = true;
-  loadingMessage.value = "Sauvegarde du personnage...";
+  updateLoading(true, "Sauvegarde du personnage...");
 
   // Post data
   const { data: res } = await useFetch(`/api/personnages/${route.params.id}`, {
@@ -554,8 +558,7 @@ const submit = async () => {
     },
   });
 
-  // Set loading state
-  isLoading.value = false;
+  updateLoading(false);
 
   // Result
   if (res.value === true) {

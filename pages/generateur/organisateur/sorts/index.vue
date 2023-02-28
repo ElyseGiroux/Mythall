@@ -62,7 +62,6 @@ const { data: sorts } = await useFetch<Sort[]>("/api/sorts");
 
 // Refs
 const isOpen = ref(false);
-const isLoading = useIsLoading();
 const message = ref("");
 const selectedSort = ref<Sort | null>(null);
 
@@ -81,7 +80,7 @@ const cancel = () => {
 const confirm = async () => {
   // Update States
   isOpen.value = false;
-  isLoading.value = true;
+  updateLoading(true);
 
   // Send Delete Request
   if (selectedSort.value?.id) {
@@ -102,6 +101,6 @@ const confirm = async () => {
   }
 
   // Update States
-  isLoading.value = false;
+  updateLoading(false);
 };
 </script>

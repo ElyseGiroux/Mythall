@@ -59,14 +59,15 @@ definePageMeta({
   middleware: ["joueur"],
 });
 
-// Data
-const { data: personnages } = await useFetch(`/api/personnages`);
-
 // Refs
 const isOpen = ref(false);
-const isLoading = useIsLoading();
 const message = ref("");
 const selectedPersonnage = ref<Personnage | null>(null);
+
+// Data
+updateLoading(true, "Téléchargement des personnages...");
+const { data: personnages } = await useFetch(`/api/personnages`);
+updateLoading(false);
 
 // Events
 const openModal = (personnage: Personnage) => {
@@ -83,7 +84,7 @@ const cancel = () => {
 const confirm = async () => {
   // Update States
   isOpen.value = false;
-  isLoading.value = true;
+  updateLoading(true, "Supression du personnages...");
 
   // Send Delete Request
   if (selectedPersonnage.value?.id) {
@@ -104,6 +105,6 @@ const confirm = async () => {
   }
 
   // Update States
-  isLoading.value = false;
+  updateLoading(false);
 };
 </script>

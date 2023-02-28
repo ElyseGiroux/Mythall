@@ -59,7 +59,6 @@ const { data: ecoles } = await useFetch<Ecole[]>("/api/ecoles");
 
 // Refs
 const isOpen = ref(false);
-const isLoading = useIsLoading();
 const message = ref("");
 const selectedEcole = ref<Ecole | null>(null);
 
@@ -78,7 +77,7 @@ const cancel = () => {
 const confirm = async () => {
   // Update States
   isOpen.value = false;
-  isLoading.value = true;
+  updateLoading(true);
 
   // Send Delete Request
   if (selectedEcole.value?.id) {
@@ -99,6 +98,6 @@ const confirm = async () => {
   }
 
   // Update States
-  isLoading.value = false;
+  updateLoading(false);
 };
 </script>
