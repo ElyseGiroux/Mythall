@@ -1,21 +1,33 @@
 export const _getNiveauEffectif = (personnage: Personnage) => {
   // Niveau Effectif
-  personnage.niveauEffectif = personnage?.classes?.map((ci) => ci.niveau).reduce((a, b) => a + +b, 0);
+  personnage.niveauEffectif = personnage?.classes?.map((ci) => ci.niveau).reduce((a, b) => a + +b, 0) || 0;
 
   // Niveau Réel
-  personnage.niveauReel = personnage?.classes?.map((ci) => ci.niveau).reduce((a, b) => a + +b, 0);
+  personnage.niveauReel = personnage?.classes?.map((ci) => ci.niveau).reduce((a, b) => a + +b, 0) || 0;
 
   // Niveau Divin
-  personnage.niveauDivin = personnage?.classes
-    ?.filter((ci) => ci.classe?.sort == "Divin")
-    .map((ci) => ci.niveau)
-    .reduce((a, b) => a + +b, 0);
+  personnage.niveauDivin =
+    personnage?.classes
+      ?.filter((ci) => ci.classe?.sort == "Divin")
+      .reduce((acc, ci) => {
+        if (ci.classe?.type == "Lanceur de Sort") {
+          return acc + +ci.niveau;
+        } else {
+          return acc + +Math.round(ci.niveau / 2);
+        }
+      }, 0) || 0;
 
   // Niveau Profane
-  personnage.niveauProfane = personnage?.classes
-    ?.filter((ci) => ci.classe?.sort == "Profane")
-    .map((ci) => ci.niveau)
-    .reduce((a, b) => a + +b, 0);
+  personnage.niveauProfane =
+    personnage?.classes
+      ?.filter((ci) => ci.classe?.sort == "Profane")
+      .reduce((acc, ci) => {
+        if (ci.classe?.type == "Lanceur de Sort") {
+          return acc + +ci.niveau;
+        } else {
+          return acc + +Math.round(ci.niveau / 2);
+        }
+      }, 0) || 0;
 
   // Safety check if no classes are defined
   if (!personnage.niveauEffectif) personnage.niveauEffectif = 0;

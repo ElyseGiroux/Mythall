@@ -282,6 +282,7 @@
           )">
           <p>
             <strong>{{ fourberieItem.fourberie?.nom }}</strong>
+            <span v-if="fourberieItem.fourberie?.afficherNiveau">&nbsp;({{ fourberieItem.niveauEffectif }})</span>
           </p>
           <span>{{ fourberieItem.fourberie?.description }}</span>
         </div>
