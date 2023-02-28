@@ -1,5 +1,5 @@
 import { firestore } from "../firebase";
-import { _getSort } from "./getSort";
+import { _getSort } from "./getSorts";
 
 export const _getRace = async (personnage: Personnage) => {
   if (personnage.raceRef) {
