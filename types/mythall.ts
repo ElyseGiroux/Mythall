@@ -214,7 +214,7 @@ declare global {
     alignement?: Alignement;
     aptitudes?: AptitudeItem[];
     divinite?: Divinite;
-    domaines: Domaine[];
+    domaines?: Domaine[];
     ecole?: Ecole;
     esprit?: Esprit;
     niveauDisponible: number;
@@ -258,6 +258,8 @@ declare global {
     resistances?: ResistanceItem[];
   }
   interface RaceDB {
+    createdAt: Timestamp;
+    updatedAt: Timestamp;
     nom: string;
     description: string;
     obligations: string;

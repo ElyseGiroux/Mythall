@@ -5,7 +5,7 @@
     @cancel="cancel()"
     @confirm="confirm()" />
   <section class="main-section">
-    <h1 class="my-8">Liste des sorts</h1>
+    <h1>Liste des sorts</h1>
     <div class="my-8">
       <nuxt-link
         class="btn-secondary"

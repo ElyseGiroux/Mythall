@@ -1,7 +1,7 @@
 import { firestore } from "../../utils/firebase";
 
 export default defineEventHandler(async () => {
-  const snap = await firestore.collection("users").get();
+  const snap = await firestore.collection("users").orderBy("displayname").get();
   return snap.docs.map((snap) => {
     return {
       createdAt: snap.data()?.createdAt,

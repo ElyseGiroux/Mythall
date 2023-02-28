@@ -1,7 +1,7 @@
 <template>
   <section class="main-section">
-    <h1 class="my-8">{{ title }}</h1>
-    <p class="mb-8">
+    <h1>{{ title }}</h1>
+    <p class="my-8">
       <NuxtLink
         class="btn-secondary"
         to="/generateur/organisateur/ecoles">

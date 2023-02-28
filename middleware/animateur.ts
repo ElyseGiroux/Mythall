@@ -9,7 +9,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
   }
 
   // Roles Check
-  if (!firebaseUser?.value?.roles?.animateur || !firebaseUser?.value?.roles?.organisateur) {
+  if (!firebaseUser?.value?.roles?.animateur && !firebaseUser?.value?.roles?.organisateur) {
     return navigateTo("/");
   }
 });

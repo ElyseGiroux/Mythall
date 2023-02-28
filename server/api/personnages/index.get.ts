@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
       return {
         id: snap.id,
         ...snap.data(),
-      };
+      } as Personnage;
     });
   } else {
     const snap = await firestore.collection("personnages").get();
@@ -16,7 +16,7 @@ export default defineEventHandler(async (event) => {
       return {
         id: snap.id,
         ...snap.data(),
-      };
+      } as Personnage;
     });
   }
 });
