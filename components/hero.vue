@@ -7,7 +7,11 @@
           class="max-w-xl"
           src="/img/logo.png" />
         <p class="max-w-4xl text-center text-2xl">Grandeur Nature Médiéval Fantastique basé sur Forgotten Realms</p>
+<<<<<<< HEAD
         <p>Test production</p>
+=======
+        <p>Production deployment test</p>
+>>>>>>> dbe75ec (Added deployment test)
       </div>
     </div>
   </section>
