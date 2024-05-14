@@ -7,6 +7,7 @@
           class="max-w-xl"
           src="/img/logo.png" />
         <p class="max-w-4xl text-center text-2xl">Grandeur Nature Médiéval Fantastique basé sur Forgotten Realms</p>
+        <p>Test production</p>
       </div>
     </div>
   </section>
