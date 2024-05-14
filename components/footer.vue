@@ -1,7 +1,8 @@
 <template>
-  <footer class="flex flex-col items-center justify-center gap-4 border-t border-accent bg-gradient-to-tl from-zinc-900 to-primary py-32 text-white">
+  <footer
+    class="flex flex-col items-center justify-center gap-4 border-t border-accent bg-gradient-to-tl from-zinc-900 to-primary py-32 text-white">
     <nuxt-link to="/">
-      <nuxt-img
+      <NuxtImg
         class="h-auto w-28"
         src="/img/logo-white.png"
         alt="Mythall"

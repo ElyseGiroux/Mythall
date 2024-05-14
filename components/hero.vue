@@ -3,7 +3,7 @@
     <div class="absolute inset-0 sm:bg-transparent sm:bg-gradient-to-br sm:from-black/70 sm:to-black/40"></div>
     <div class="max-w-main px-main relative py-40">
       <div class="flex flex-col items-center justify-center gap-4">
-        <nuxt-img
+        <NuxtImg
           class="max-w-xl"
           src="/img/logo.png" />
         <p class="max-w-4xl text-center text-2xl">Grandeur Nature Médiéval Fantastique basé sur Forgotten Realms</p>

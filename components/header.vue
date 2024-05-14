@@ -1,7 +1,7 @@
 <template>
   <header class="px-main flex justify-between border-b border-accent bg-gradient-to-br from-zinc-900 to-primary py-8 shadow-2xl">
     <nuxt-link to="/">
-      <nuxt-img
+      <NuxtImg
         class="h-auto w-28"
         src="/img/logo-white.png"
         alt="Mythall"
