@@ -1,0 +1,1 @@
+To view and modify the diagrams, open the .drawio files in https://app.diagrams.net/

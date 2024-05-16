@@ -1,0 +1,456 @@
+<mxfile host="app.diagrams.net" modified="2024-05-16T18:39:47.608Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="Km7h6d8zPTwuX-OaK4sz" version="24.4.2" type="device">
+  <diagram name="Page-1" id="KNLOTo-2WZaDSftSSsX-">
+    <mxGraphModel dx="3990" dy="1263" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-37" value="SPELL_TABLE" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="1720" width="260" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-36" value="Absorbtion de Larloch" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-37" vertex="1">
+          <mxGeometry x="40" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-42" value="Dissipation de la magie" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-37" vertex="1">
+          <mxGeometry x="40" y="140" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-36" value="Sanctuaire" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="3bC_OSgIVXjAM_rlMVKo-37">
+          <mxGeometry x="40" y="230" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-38" value="ABILITY_TYPES_TABLE" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
+          <mxGeometry x="820" y="875" width="320" height="377" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-33" value="Feat_type" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-38" vertex="1">
+          <mxGeometry x="35" y="137" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-35" value="Spell_type" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-38" vertex="1">
+          <mxGeometry x="35" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-43" value="School_type" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-38" vertex="1">
+          <mxGeometry x="35" y="217" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-44" value="Domain_type" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-38" vertex="1">
+          <mxGeometry x="180" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-100" value="Racial_type" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-38" vertex="1">
+          <mxGeometry x="180" y="137" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-111" value="Stat_mod_type" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-38" vertex="1">
+          <mxGeometry x="180" y="217" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-130" value="class_type" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-38" vertex="1">
+          <mxGeometry x="35" y="297" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-44" value="..." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="3bC_OSgIVXjAM_rlMVKo-38">
+          <mxGeometry x="180" y="297" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-39" value="CHARACTERS_TABLE" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-240" y="195" width="200" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-34" value="Maitre Wong" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-39" vertex="1">
+          <mxGeometry x="40" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-85" value="Lahassa" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-39" vertex="1">
+          <mxGeometry x="40" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-40" value="CLASSES_TABLE" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
+          <mxGeometry x="-660" y="190" width="200" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-41" value="Wizard" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-40" vertex="1">
+          <mxGeometry x="30" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-87" value="Priest" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-40" vertex="1">
+          <mxGeometry x="30" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-34" target="3bC_OSgIVXjAM_rlMVKo-41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-280" y="280" />
+              <mxPoint x="-280" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-46" value="CHARACTER_CLASSES_RTABLE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="3bC_OSgIVXjAM_rlMVKo-45" vertex="1" connectable="0">
+          <mxGeometry x="-0.1711" y="1" relative="1" as="geometry">
+            <mxPoint x="-22" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-52" value="FEATS_TABLE" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="1710" width="260" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-53" value="Robustesse I" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-52" vertex="1">
+          <mxGeometry x="40" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-54" value="Connaissance de l&#39;Abjuration" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-52" vertex="1">
+          <mxGeometry x="40" y="200" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-98" value="Banissement des Morts-vivants" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-52" vertex="1">
+          <mxGeometry x="40" y="120" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-45" value="Protection contre la mort" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="3bC_OSgIVXjAM_rlMVKo-52">
+          <mxGeometry x="40" y="280" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-55" value="DOMAINS_TABLE" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-305" y="1730" width="260" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-56" value="Bien" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-55" vertex="1">
+          <mxGeometry x="40" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-57" value="Connaissance" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-55" vertex="1">
+          <mxGeometry x="40" y="140" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-58" value="DOMAIN_ABILITIES_RTABLE" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-490" y="1140" width="270" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-96" value="bien_id&lt;div&gt;feat_type_id&lt;br&gt;&lt;div&gt;ability_id = feat_id&lt;/div&gt;&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;False&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-58" vertex="1">
+          <mxGeometry x="60" y="30" width="135" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-101" value="connaissance_id&lt;div&gt;feat_type_id&lt;br&gt;&lt;div&gt;ability_id = feat_id&lt;/div&gt;&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;False&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-58" vertex="1">
+          <mxGeometry x="60" y="140" width="135" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-102" value="connaissance_id&lt;div&gt;stat_mod_type_id&lt;br&gt;&lt;div&gt;ability_id = mystery_stat_id&lt;/div&gt;&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;False&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-58" vertex="1">
+          <mxGeometry x="45" y="250" width="165" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="NcD7vumXE6YsKdhT098B-1" value="connaissance_id&lt;div&gt;spell_type_id&lt;br&gt;&lt;div&gt;spell_id&lt;/div&gt;&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;True&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-58" vertex="1">
+          <mxGeometry x="45" y="360" width="175" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="NcD7vumXE6YsKdhT098B-2" value="bien_id&lt;div&gt;spell_type_id&lt;br&gt;&lt;div&gt;spell_id&lt;/div&gt;&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;True&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-58" vertex="1">
+          <mxGeometry x="40" y="470" width="175" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-63" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;domain_id&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ability_type_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ability_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ability_value&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;level_obtained&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;isChoice&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-490" y="1040" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-64" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;PK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ability_type_id" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" parent="1" vertex="1">
+          <mxGeometry x="820" y="830" width="210" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-70" value="CHARACTER_ABILITIES_CHOICES_RTABLE" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
+          <mxGeometry x="380" y="232.5" width="270" height="477.5" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-74" value="Maitre Wong_id&lt;div&gt;SchoolofMagicA_id&lt;br&gt;NecroSchool_id&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-70" vertex="1">
+          <mxGeometry x="80" y="47.5" width="120" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-83" value="Maitre Wong_id&lt;div&gt;Spell_type_id&lt;/div&gt;&lt;div&gt;ability_choice_id = spell_id&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-70" vertex="1">
+          <mxGeometry x="80" y="157.5" width="120" height="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-90" value="Lahassa_id&lt;div&gt;Domain_type_id&lt;br&gt;good_domain_id&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-70" vertex="1">
+          <mxGeometry x="80" y="297.5" width="120" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-75" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;character_id&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ability_type_id&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ability_choice_id&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;level_obtained&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;*Is used when &quot;choice&quot; is true&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" parent="1" vertex="1">
+          <mxGeometry x="380" y="120" width="270" height="112.5" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-78" value="MAGIC_SCHOOLS_TABLE" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1710" width="250" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-79" value="Necromancy" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-78" vertex="1">
+          <mxGeometry x="40" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-80" value="Abjuration" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-78" vertex="1">
+          <mxGeometry x="40" y="140" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-81" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-34" target="3bC_OSgIVXjAM_rlMVKo-74" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="270" />
+              <mxPoint x="80" y="342" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-85" target="3bC_OSgIVXjAM_rlMVKo-87" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-89" value="CHARACTER_CLASSES_RTABLE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="3bC_OSgIVXjAM_rlMVKo-88" vertex="1" connectable="0">
+          <mxGeometry x="-0.1556" y="-1" relative="1" as="geometry">
+            <mxPoint x="-27" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-91" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-34" target="3bC_OSgIVXjAM_rlMVKo-83" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="270" />
+              <mxPoint x="80" y="456" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-85" target="3bC_OSgIVXjAM_rlMVKo-90" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-230.0011764705883" y="70" as="sourcePoint" />
+            <mxPoint x="-200.0011764705883" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-140" y="573" />
+              <mxPoint x="460" y="573" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-56" target="3bC_OSgIVXjAM_rlMVKo-96" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-175" y="1220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-96" target="3bC_OSgIVXjAM_rlMVKo-98" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-80" y="1250" />
+              <mxPoint x="-80" y="1540" />
+              <mxPoint x="440" y="1540" />
+              <mxPoint x="440" y="1860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-103" value="**STATS_MOD_RTABLE**" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1100" y="1530" width="260" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-112" value="mystery_stat_id&lt;div&gt;domain_type_id&lt;br&gt;&lt;div&gt;connaissance_id&amp;nbsp;&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-103" vertex="1">
+          <mxGeometry x="70" y="40" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-129" value="constitution_id&lt;div&gt;class_type_id&lt;br&gt;&lt;div&gt;wizard_class_id&amp;nbsp;&lt;/div&gt;&lt;div&gt;-1&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-103" vertex="1">
+          <mxGeometry x="70" y="125" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-1" value="wizard_class_id&lt;div&gt;class_type_id&lt;br&gt;&lt;div&gt;constitution_id&amp;nbsp;&lt;/div&gt;&lt;div&gt;-1&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="3bC_OSgIVXjAM_rlMVKo-103">
+          <mxGeometry x="70" y="210" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-106" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;character_stat_id&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;source_ability_type_id&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;source_ability_id&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;value&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-1310" y="1530" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-90" target="3bC_OSgIVXjAM_rlMVKo-56" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="660" />
+              <mxPoint x="160" y="660" />
+              <mxPoint x="160" y="1620" />
+              <mxPoint x="-100" y="1620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-108" value="CHARACTER_STATISTICS_TABLE" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1100" y="1110" width="260" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-109" value="Strength" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-108" vertex="1">
+          <mxGeometry x="40" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-110" value="Mystery Knowledge" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-108" vertex="1">
+          <mxGeometry x="40" y="250" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-4" value="Constitution" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="3bC_OSgIVXjAM_rlMVKo-108">
+          <mxGeometry x="40" y="110" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-34" value="Wisdom" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="3bC_OSgIVXjAM_rlMVKo-108">
+          <mxGeometry x="40" y="180" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-47" value="PV chest" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="3bC_OSgIVXjAM_rlMVKo-108">
+          <mxGeometry x="40" y="320" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-57" target="3bC_OSgIVXjAM_rlMVKo-101" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-440" y="1875" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-580" y="1900" />
+              <mxPoint x="-580" y="1300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-57" target="3bC_OSgIVXjAM_rlMVKo-102" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-510" y="1900" />
+              <mxPoint x="-510" y="1440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-101" target="3bC_OSgIVXjAM_rlMVKo-54" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-100" y="1330" />
+              <mxPoint x="-100" y="1560" />
+              <mxPoint x="420" y="1560" />
+              <mxPoint x="420" y="1940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-118" value="CLASS_ABILITIES_RTABLE" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
+          <mxGeometry x="-1230" y="190" width="310" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-119" value="wizard_id&lt;div&gt;spell_type_id&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;true&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-118" vertex="1">
+          <mxGeometry x="10" y="40" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-123" value="wizard_id&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;spell_type_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;null&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2&lt;/span&gt;&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;true&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-118" vertex="1">
+          <mxGeometry x="160" y="40" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-124" value="priest_id&lt;div&gt;domain_type_id&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;true&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-118" vertex="1">
+          <mxGeometry x="10" y="170" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-128" value="wizard_id&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;stat_mod_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;con_stat_id&lt;/div&gt;&lt;div&gt;-1&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;false&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="3bC_OSgIVXjAM_rlMVKo-118" vertex="1">
+          <mxGeometry x="160" y="170" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-121" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;class_id&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ability_type_id&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ability_id&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ability_value&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;level_obtained&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;isChoice&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-1230" y="80" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-122" value="PROGRESSION" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="-1370" y="190" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-41" target="3bC_OSgIVXjAM_rlMVKo-123" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-760" y="230" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-790" y="280" />
+              <mxPoint x="-790" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-87" target="3bC_OSgIVXjAM_rlMVKo-124" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-570" y="690" />
+              <mxPoint x="-1160" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-41" target="3bC_OSgIVXjAM_rlMVKo-119" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-790" y="280" />
+              <mxPoint x="-790" y="220" />
+              <mxPoint x="-1160" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bC_OSgIVXjAM_rlMVKo-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3bC_OSgIVXjAM_rlMVKo-41" target="3bC_OSgIVXjAM_rlMVKo-128" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NcD7vumXE6YsKdhT098B-6" value="&lt;div&gt;*Implique de la logique custom dans les appels API pour chaque type de choix (Esprit, Domaine, Écoles de magie, etc.)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Étapes pour choisir son spell de domaine:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On level-up la classe de prêtre (Au level 1 ou +)&lt;br&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On regarde les abilités de la classe de prêtre [CLASS_ABILITIES_RTABLE]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On vérifie s&#39;il y a des choix à faire (isChoice = true) spells et/ou Domaines.&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Si on a un choix de spell, on recherche dans la table [SPELLS_TABLE] et [PRIEST_SPELL_LIST] tout &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;les choix possible en filtrant selon les spells déjà choisis dans &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;[CHARACTER_ABILITIES_CHOICES_RTABLE]&amp;nbsp;et on stocke les résultats dans la table &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;[CHARACTER_ABILITIES_CHOICES_RTABLE]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;-&lt;/span&gt;&amp;nbsp;On regarde ensuite les abilités de domaine du prêtre (Puisqu&#39;on à level-up la classe prête)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Si on a des spells de domaine du prêtre à choisir (isChoice = true), on demande à faire le choix. Le &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;résultat sera écrit dans la table [CHARACTER_ABILITIES_CHOICES_RTABLE]&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Étapes pour choisir une fourberie:&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On level-up la classe de rogue&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On regarde les abilités de la classe rogue [CLASS_ABILITIES_RTABLE]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On voit qu&#39;il y a un choix à faire (isChoice = true) pour une abilité de type [rogue_talent_type]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On va chercher la liste des rogues talents du niveau adéquats et qui ne se retrouvent pas dans la liste &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;du joueur [CHARACTER_ABILITIES_CHOICES_RTABLE]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On fait un choix et on stocke les données dans la table [CHARACTER_ABILITIES_CHOICES_RTABLE]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Étapes pour obtenir le -1 de constitution d&#39;un mage level 1:&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On level-up la classe de mage au niveau 1&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On regarde les abilités de la classe wizard [CLASS_ABILITIES_RTABLE] du niveau 1&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On trouve un abilité de type [stat_mod_type] qui n&#39;est pas un choix.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On va dans la table [&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Étapes pour choisir un spell:&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On level-up une classe qui obtient des sorts (ex: Mage lvl 2)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On regarde dans la table [CLASS_ABILITIES_RTABLE] pour la classe de [wizard] au niveau 2.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On remarque qu&#39;on obtient des abilités de type [spell_type] avec l&#39;option [isChoice = true]&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- On va donc chercher dans la table [SPELLS_TABLE], filtré avec la table &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;[WIZARD_SORCERER_SPELL_LIST_TABLE] et le niveau de [wizard] (2).&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Les choix de l&#39;utilisateur sont par la suite stockés dans la table [CHARACTER_ABILITIES_CHOICES_RTABLE]&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;**&lt;/span&gt;&amp;nbsp;Faudrait-il avoir aussi avoir le niveau d&#39;obtention par classe/source? Genre savoir quel spell on a prit au &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;niveau 3 de mage vs 5 de mage. Il faudrait alors avoir des fields: [ability_source_type], [source_level]&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" parent="1" vertex="1">
+          <mxGeometry x="670" y="120" width="680" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3bC_OSgIVXjAM_rlMVKo-102" target="3bC_OSgIVXjAM_rlMVKo-110">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-660" y="1400" />
+              <mxPoint x="-660" y="1400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3bC_OSgIVXjAM_rlMVKo-128" target="KBjnZA_HUNUxsuUldjEP-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1010" y="540" />
+              <mxPoint x="-1120" y="540" />
+              <mxPoint x="-1120" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-6" value="RACES_TABLE" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-440" y="540" width="200" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-7" value="Humain" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="KBjnZA_HUNUxsuUldjEP-6">
+          <mxGeometry x="40" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-8" value="Aasimaar" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="KBjnZA_HUNUxsuUldjEP-6">
+          <mxGeometry x="40" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-9" value="RACE_ABILITIES_RTABLE" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="730" width="210" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-10" value="human_id&lt;div&gt;feat_type_id&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;true&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="KBjnZA_HUNUxsuUldjEP-9">
+          <mxGeometry x="40" y="50" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-11" value="aasimaar_id&lt;div&gt;spell_type_id&lt;/div&gt;&lt;div&gt;sanctuaire_id&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;false&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="KBjnZA_HUNUxsuUldjEP-9">
+          <mxGeometry x="40" y="170" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-18" value="aasimaar_id&lt;div&gt;stat_mod_type_id&lt;/div&gt;&lt;div&gt;wisdom_id&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;false&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="KBjnZA_HUNUxsuUldjEP-9">
+          <mxGeometry x="40" y="280" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-12" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;race_id&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ability_type_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ability_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ability_value&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;level_obtained&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;isChoice&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="630" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3bC_OSgIVXjAM_rlMVKo-34" target="KBjnZA_HUNUxsuUldjEP-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-220" y="275" />
+              <mxPoint x="-220" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-15" value="CHARACTER_RACES_RTABLE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KBjnZA_HUNUxsuUldjEP-13">
+          <mxGeometry x="0.1198" y="4" relative="1" as="geometry">
+            <mxPoint x="-49" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3bC_OSgIVXjAM_rlMVKo-85" target="KBjnZA_HUNUxsuUldjEP-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-160" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-17" value="CHARACTER_RACES_RTABLE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KBjnZA_HUNUxsuUldjEP-14">
+          <mxGeometry x="0.0205" y="-1" relative="1" as="geometry">
+            <mxPoint x="-29" y="94" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KBjnZA_HUNUxsuUldjEP-18" target="KBjnZA_HUNUxsuUldjEP-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-170" y="1055" />
+              <mxPoint x="-170" y="1000" />
+              <mxPoint x="-810" y="1000" />
+              <mxPoint x="-810" y="1320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KBjnZA_HUNUxsuUldjEP-11" target="KBjnZA_HUNUxsuUldjEP-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="780" y="945" />
+              <mxPoint x="780" y="1980" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-38" value="&lt;div&gt;* Pour une abilité de type [stat_mod], la valeur [ability_value] indique la modification de statistique.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;* Pour une abilité de type [spell_type], la valeur [ability_value] indique la quantité de spells à apprendre.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-1520" y="232.5" width="290" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-39" value="FEAT_ABILITIES_RTABLE" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="1340" width="260" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-40" value="robustesse_id&lt;div&gt;stat_mod_type_id&lt;/div&gt;&lt;div&gt;pv_chest_id&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;false&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="KBjnZA_HUNUxsuUldjEP-39">
+          <mxGeometry x="40" y="40" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-50" value="prot_vs_mort_id&lt;div&gt;resist_type_id&lt;/div&gt;&lt;div&gt;mort_resist_id&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;null&lt;/div&gt;&lt;div&gt;false&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="KBjnZA_HUNUxsuUldjEP-39">
+          <mxGeometry x="40" y="190" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-43" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;feat_id&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;FK&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ability_type_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ability_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ability_value&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;level_obtained&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;isChoice&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" vertex="1" parent="1">
+          <mxGeometry x="490" y="1240" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3bC_OSgIVXjAM_rlMVKo-53" target="KBjnZA_HUNUxsuUldjEP-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="1780" />
+              <mxPoint x="470" y="1500" />
+              <mxPoint x="620" y="1500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KBjnZA_HUNUxsuUldjEP-40" target="KBjnZA_HUNUxsuUldjEP-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="1430" as="sourcePoint" />
+            <mxPoint x="-860" y="1460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-40" y="1430" />
+              <mxPoint x="-40" y="1170" />
+              <mxPoint x="-200" y="1170" />
+              <mxPoint x="-200" y="1020" />
+              <mxPoint x="-650" y="1020" />
+              <mxPoint x="-650" y="1460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KBjnZA_HUNUxsuUldjEP-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KBjnZA_HUNUxsuUldjEP-45" target="KBjnZA_HUNUxsuUldjEP-50">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="2020" />
+              <mxPoint x="760" y="1580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
