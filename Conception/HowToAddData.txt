@@ -1,0 +1,23 @@
+TO ADD A FEAT
+
+	Fill D_FEATS_TABLE
+	If required (Eg: Robustesse l), add the necessary data in R_FEAT_ABILITIES_TABLE
+	Add the feat restrictions (R_FEAT_ALLOWED_RACES_TABLE, R_FEAT_ALLOWED_CLASSES_TABLE & R_FEAT_REQUIREMENTS_TABLE)
+
+
+TO CREATE A CLASS:
+
+		Fill D_CLASSES_TABLE
+		Fill R_CLASS_ABILITIES_TABLE (Progression)
+		Add the class restrictions (R_CLASS_ALLOWED_MULTICLASS_TABLE & R_CLASS_ALLOWED_ALIGNMENTS_TABLE)
+		Add the required Abilities (Domains, Skills, Rogue Talents, Schools of Magic, etc.) and their requirements
+		
+		
+		
+Mage Level 1:
+	-1 Con !
+	-1 Str !
+	2 Spells !
+	1 School of magic !
+	Wielding feats !
+	Écriture des parchemins, feat !
