@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -5,11 +6,19 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+=======
+# dependencies
+/node_modules
+>>>>>>> b184650 (Fixed prod build error)
 
 # testing
 /coverage
 
+<<<<<<< HEAD
 # next.js
+=======
+# Next.js
+>>>>>>> b184650 (Fixed prod build error)
 /.next/
 /out/
 
@@ -18,7 +27,10 @@
 
 # misc
 .DS_Store
+<<<<<<< HEAD
 *.pem
+=======
+>>>>>>> b184650 (Fixed prod build error)
 
 # debug
 npm-debug.log*
@@ -26,6 +38,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+<<<<<<< HEAD
 .env*.local
 
 # vercel
@@ -34,3 +47,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+=======
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+>>>>>>> b184650 (Fixed prod build error)
