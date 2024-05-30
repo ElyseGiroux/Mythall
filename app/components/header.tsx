@@ -56,11 +56,7 @@ const links = [
   // },
 ];
 
-<<<<<<< HEAD
-function classNames(...classes) {
-=======
 function classNames(...classes: any[]) {
->>>>>>> b184650 (Fixed prod build error)
   return classes.filter(Boolean).join(" ");
 }
 
