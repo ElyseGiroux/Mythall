@@ -1,0 +1,76 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply selection:bg-accent selection:text-white;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+
+  p a {
+    @apply font-bold text-primary transition-colors hover:text-accent;
+  }
+}
+
+@layer utilities {
+  .btn-primary {
+    @apply rounded border border-primary bg-primary px-4 py-2 font-light text-white shadow transition
+    hover:cursor-pointer hover:bg-transparent hover:text-primary hover:shadow-xl
+    focus:bg-transparent focus:text-primary focus:shadow-xl
+    disabled:opacity-50
+    disabled:hover:cursor-default disabled:hover:bg-primary disabled:hover:text-white disabled:hover:shadow;
+  }
+
+  .btn-secondary {
+    @apply rounded border border-primary bg-transparent px-4 py-2 font-light text-primary  shadow transition
+    hover:cursor-pointer hover:border-accent hover:text-accent hover:shadow-xl
+    focus:border-accent focus:text-accent focus:shadow-xl
+    disabled:opacity-50
+    disabled:hover:cursor-default disabled:hover:bg-primary disabled:hover:text-primary disabled:hover:shadow;
+  }
+
+  .card {
+    @apply rounded-lg  px-6 py-4 shadow-lg;
+  }
+
+  form label {
+    @apply text-sm font-medium text-gray-700;
+  }
+
+  .form-group {
+    @apply flex grow flex-col gap-2;
+  }
+
+  .form-input {
+    @apply rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm;
+  }
+
+  /* Spacing */
+  .max-w-main {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .px-main {
+    @apply px-4 sm:px-6;
+  }
+
+  .py-main {
+    @apply pt-4 pb-8 sm:pt-8 sm:pb-16;
+  }
+
+  .main-section {
+    @apply max-w-main px-main py-main;
+  }
+}
