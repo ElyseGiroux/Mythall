@@ -43,17 +43,6 @@ const links = [
       { name: "Remerciements", href: "remerciements" },
     ],
   },
-  // {
-  //   name: "Jeu",
-  //   href: "/",
-  //   dropdown: [
-  //     { name: "Races", href: "jeu/races" },
-  //     { name: "Classes", href: "jeu/classes" },
-  //     { name: "Dons", href: "jeu/dons" },
-  //     { name: "Fourberies", href: "jeu/fourberies" },
-  //     { name: "Sorts", href: "jeu/sorts" },
-  //   ],
-  // },
 ];
 
 function classNames(...classes: any[]) {
