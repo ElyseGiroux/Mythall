@@ -87,7 +87,9 @@ export default function Header() {
         <PopoverGroup className="hidden lg:flex lg:gap-x-12 z-10">
           {links.map((link) =>
             link.dropdown ? (
-              <Popover className="relative z-10">
+              <Popover
+                key={link.name}
+                className="relative z-10">
                 <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white hover:text-accent transition z-10">
                   {link.name}
                   <ChevronDownIcon
@@ -118,6 +120,7 @@ export default function Header() {
               </Popover>
             ) : (
               <Link
+                key={link.name}
                 href={link.href}
                 target={link.target ? link.target : ""}
                 className="text-sm font-semibold leading-6 text-white hover:text-accent transition">
@@ -175,6 +178,7 @@ export default function Header() {
                 {links.map((link) =>
                   link.dropdown ? (
                     <Disclosure
+                      key={link.name}
                       as="div"
                       className="-mx-3">
                       {({ open }) => (
@@ -203,6 +207,7 @@ export default function Header() {
                     </Disclosure>
                   ) : (
                     <Link
+                      key={link.name}
                       href={link.href}
                       target={link.target ? link.target : ""}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-accent transition">
